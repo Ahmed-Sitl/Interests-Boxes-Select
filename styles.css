@@ -1,0 +1,111 @@
+/* @import 'https://fonts.googleapis.com/css?family=Lato:400,700'; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+:root {
+    --main-purple-color: #5c48f1;
+    --elements-background-color: #eeecfd;
+    --element-border-color: #e0e0e1;
+}
+
+/* contenter */
+.contenter {
+    padding: 5px;
+    width: 1000px;
+    margin: auto;
+}
+
+/* end contenter */
+/* title */
+.contenter .title {
+    background-color: var(--element-border-color);
+}
+
+.contenter .title h2 {
+    text-align: center;
+    color: var(--main-purple-color);
+    padding: 20px;
+}
+
+/* end title */
+
+/* boxes */
+.contenter .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contenter .boxes div {
+    width: calc((100% / 4) - 10px);
+    height: 150px;
+    margin-top: 10px;
+    border: 3px solid var(--element-border-color);
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenter .boxes div::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--element-border-color);
+    border-radius: 4px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.contenter .boxes div img {
+    width: 33%;
+}
+
+.contenter .boxes div p {
+    font-weight: bold;
+}
+
+.contenter .boxes div:nth-child(2)::before {
+    border-color: var(--main-purple-color);
+}
+
+.contenter .boxes div:nth-child(2)::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: var(--element-border-color);
+    border-radius: 3px;
+    top: 9.5px;
+    left: 9.5px;
+}
+
+.contenter .boxes div:nth-child(4),
+.contenter .boxes div:nth-child(7) {
+    background-color: var(--elements-background-color);
+    border-color: var(--main-purple-color);
+}
+
+.contenter .boxes div:nth-child(4)::after,
+.contenter .boxes div:nth-child(7)::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: var(--main-purple-color);
+    border-radius: 3px;
+    top: 9.5px;
+    left: 9.5px;
+}
+
+/* end boxes */
